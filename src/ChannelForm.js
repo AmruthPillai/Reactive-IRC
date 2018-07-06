@@ -11,11 +11,11 @@ class ChannelForm extends Component {
       // let {channelName} = this.state; // Same Functionality
       let channelName = this.state.channelName;
 
-      console.log(channelName);
+      this.props.addChannel(channelName);
 
       this.setState({
         channelName: ''
-      })
+      });
 
       e.preventDefault();
     }
