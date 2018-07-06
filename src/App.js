@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import Channel from './Channel';
+import ChannelList from './ChannelList';
+
+let channels = [
+  { name: 'Hardware Support' },
+  { name: 'Software Support' }
+];
 
 class App extends Component {
   render() {
     return (
-      <Channel name="Hardware Support" />
+      <div className="container mt-5">
+        <ChannelList channels={ channels } />
+      </div>
     );
   }
 }
