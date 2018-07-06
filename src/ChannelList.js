@@ -7,8 +7,8 @@ class Channel extends Component {
 
   render() {
     return (
-      <li className="list-group-item" onClick={ this.handleClick.bind(this) }>
-        { this.props.name }
+      <li className="list-group-item" onClick={this.handleClick.bind(this)}>
+        {this.props.name}
       </li>
     );
   }
@@ -20,7 +20,7 @@ class ChannelList extends Component {
       <ul className="list-group">
         { this.props.channels.map((channel, key) => {
           return(
-            <Channel key={ key } name={ channel.name } />
+            <Channel key={key} name={channel.name} />
           )
         }) }
       </ul>
