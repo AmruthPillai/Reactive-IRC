@@ -11,6 +11,8 @@ class ChannelForm extends Component {
       // let {channelName} = this.state; // Same Functionality
       let channelName = this.state.channelName;
 
+      console.log(channelName);
+
       this.setState({
         channelName: ''
       })
