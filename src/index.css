@@ -1,5 +1,22 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.app {
+  height: 100vh;
+}
+
+.nav {
+  flex-basis: 20%;
+}
+
+.support {
+  flex: 1;
+  margin: 10px;
+}
+
+.messages {
+  margin: 10px;
+  flex: 1;
+}
+
+.channelList > ul, .userList > ul {
+  flex: 1;
+  overflow-y: auto;
 }

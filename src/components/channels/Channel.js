@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   channel: PropTypes.object.isRequired,
-  setChannel: PropTypes.func.isRequired
+  setChannel: PropTypes.func.isRequired,
+  activeChannel: PropTypes.object.isRequired
 };
 
 class Channel extends Component {
@@ -14,13 +15,12 @@ class Channel extends Component {
   }
 
   render() {
-    const {channel} = this.props;
+    const {channel, activeChannel} = this.props;
+    const active = channel === activeChannel ? 'list-group-item active' : 'list-group-item';
 
     return (
-      <li>
-        <a onClick={this.onClick.bind(this)}>
-          {channel.name}
-        </a>
+      <li className={active} onClick={this.onClick.bind(this)}>
+        {channel.name}
       </li>
     );
   }
